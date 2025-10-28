@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Norse";
-    src: url("fonts/Norse-Bold.woff2") format("woff2"),
-        url("fonts/Norse-Bold.woff") format("woff");
+    src: url("/fonts/Norse-Bold.woff2") format("woff2"),
+        url("/fonts/Norse-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -53,7 +53,7 @@ body {
     flex: 1;
     background: darkgoldenrod;
     position: relative;
-    background: url("imgs/waterfall.jpg") 10% 20% / cover no-repeat;
+    background: url("/imgs/waterfall.jpg") 10% 20% / cover no-repeat;
 }
 
 header {
