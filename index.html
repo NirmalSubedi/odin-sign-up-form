@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper-left">
         <header>
-            <img src="/imgs/odin-lined.png" alt="">
+            <img src="/imgs/odin-lined.png" alt="The Odin Project logo" width="50" height="70">
             <h1>ODIN</h1>
         </header>
         <p class="caption">
@@ -25,35 +25,39 @@
     </div>
 
     <div class="wrapper-right">
-        <p>This is not a real service! You know you need something like this in you life to help your deepest dreams. Sign
-            up <em>now</em> to get started.</p>
-        <p>You <em>know</em> you want to.</p>
+        <div class="description">
+            <p>This is not a real service! You know you need something like this in you life to help your deepest dreams. <span>Sign
+                up <em>now</em> to get started.</span></p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
         <form action="" method="post">
             <fieldset>
                 <h2>Let's do this!</h2>
-                <div>
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                </div>
-                <div>
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name">
-                </div>
-                <div>
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div>
-                    <label for="phone_number">PHONE NUMBER</label>
-                    <input type="tel" id="phone_number" name="phone_number">
-                </div>
-                <div>
-                    <label for="password1">PASSWORD</label>
-                    <input type="password" id="password1" name="password1" required>
-                </div>
-                <div>
-                    <label for="password2">CONFIRM PASSWORD</label>
-                    <input type="password" id="password2" name="password2" required>
+                <div class="fields">
+                    <div>
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" autofocus required>
+                    </div>
+                    <div>
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="phone_number">
+                    </div>
+                    <div>
+                        <label for="password1">PASSWORD</label>
+                        <input type="password" id="password1" name="password1" required>
+                    </div>
+                    <div>
+                        <label for="password2">CONFIRM PASSWORD</label>
+                        <input type="password" id="password2" name="password2" required>
+                    </div>
                 </div>
             </fieldset>
             <button type="submit">Create Account</button>

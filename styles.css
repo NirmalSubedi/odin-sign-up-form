@@ -11,13 +11,13 @@
     --font-logo: Norse, cursive, sans-serif;
     --font-generic: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-size-body: clamp(1rem, calc(1rem + 0.50vw), 2rem);
+    --font-size-body: 1rem;
     --color-bg-tones: hsl(84, 91%, 26%);
     --color-light: hsl(220, 13%, 91%);
     --color-dark: hsl(220, 13%, 0%);
+    --color-blue: hsl(212, 100%, 40%);
     --color-invalid: hsl(0, 100%, 38%);
-    --line-height-head: 1.1;
-    --line-height-text: 1.5;
+    --line-height-text: 1.15;
 }
 
 /* Reset styles */
@@ -42,7 +42,146 @@ select {
     font: inherit;
 }
 
-/* My styles */
+/*= My Styles =*/
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+/*== LEFT SIDE ==*/
+.wrapper-left {
+    flex: 1;
+    background: darkgoldenrod;
+    position: relative;
+    background: url("/imgs/waterfall.jpg") 10% 20% / cover no-repeat;
+}
+
 header {
-    background: rgb(0 0 0 / 0.2);
+    background: rgb(0 0 0 / 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+header h1 {
+    font: clamp(2rem, calc(2rem + 2vw), 5rem) var(--font-logo);
+    color: #fff;
+}
+
+.caption,
+.caption a {
+    color: white;
+}
+
+.caption {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*== RIGHT SIDE ==*/
+.wrapper-right {
+    padding: 1rem 0;
+    flex: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: #eee8;
+    color: var(--color-dark);
+    font: var(--font-size-body)/var(--line-height-text) var(--font-generic);
+}
+
+.description,
+fieldset,
+.login {
+    padding-left: 2rem;
+}
+
+.description {
+    font-weight: 500;
+}
+
+.description span {
+    display: block;
+}
+
+.description p {
+    margin-bottom: 1rem;
+}
+
+.description p:last-child {
+    margin-bottom: 2rem;
+}
+
+
+form h2 {
+    font-size: clamp(1rem, 1.5rem, 1.75rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    padding: 1rem 0 1rem 2rem;
+    border: none;
+    background: #fff;
+    box-shadow: 1px 3px 3px #bbb;
+}
+
+.fields {
+    display: flex;
+    flex-flow: wrap;
+    gap: 1rem 3rem;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    letter-spacing: 0;
+    font-size: 1rem;
+    padding: 0.25em 0.5em;
+    border: 1px solid var(--color-light);
+    border-radius: 4px;
+}
+
+input:invalid {
+    border-color: var(--color-invalid);
+}
+
+input:focus {
+    outline-color: var(--color-blue);
+    box-shadow: 3px 3px 5px #aaa;
+}
+
+button,
+.login {
+    margin-top: 2rem;
+}
+
+button {
+    margin-left: 2rem;
+    padding: 0.75em 2.25em;
+    border: none;
+    border-radius: 0.25em;
+    background: var(--color-bg-tones);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px var(--color-bg-tones);
+}
+
+.login a {
+    color: var(--color-bg-tones);
+    text-decoration: none;
 }
