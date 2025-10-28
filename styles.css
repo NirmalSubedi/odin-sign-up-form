@@ -1,27 +1,48 @@
 @font-face {
-  font-family: "Norse";
-  src: url("/fonts/Norse-Bold.woff2") format("woff2"),
-    url("/fonts/Norse-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Norse";
+    src: url("/fonts/Norse-Bold.woff2") format("woff2"),
+        url("/fonts/Norse-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-logo: Norse, cursive, sans-serif;
+    --font-generic: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-size-body: clamp(1rem, calc(1rem + 0.50vw), 2rem);
+    --color-bg-tones: hsl(84, 91%, 26%);
+    --color-light: hsl(220, 13%, 91%);
+    --color-dark: hsl(220, 13%, 0%);
+    --color-invalid: hsl(0, 100%, 38%);
+    --line-height-head: 1.1;
+    --line-height-text: 1.5;
 }
 
 /* Reset styles */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 * {
-  margin: 0;
+    margin: 0;
 }
+
 body {
-  line-height: 1.5;
+    line-height: var(--line-height-text);
 }
+
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
+}
+
+/* My styles */
+header {
+    background: rgb(0 0 0 / 0.2);
 }
